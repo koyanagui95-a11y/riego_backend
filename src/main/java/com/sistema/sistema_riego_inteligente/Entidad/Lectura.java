@@ -39,7 +39,7 @@ public class Lectura implements Serializable {
     @Column(columnDefinition = "TEXT")
     private Map<String, Object> extras = new HashMap<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER))
     @JoinColumn(name = "usuario_id", nullable = false)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Usuario usuario;
